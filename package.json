@@ -1,0 +1,73 @@
+{
+  "name": "nuxt-bpmn-demo",
+  "version": "1.0.0",
+  "description": "NuxtJS BPMN Demo",
+  "author": "Le Minh Tri &lt;ansidev@gmail.com&gt;",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "test": "jest",
+    "bpmnlint": "bpmnlint"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@nuxtjs/axios": "^5.9.5",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@processmaker/modeler": "^0.18.4",
+    "@processmaker/screen-builder": "^0.21.6",
+    "@processmaker/vue-form-elements": "^0.13.2",
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.4.1",
+    "bpmn-moddle": "^6.0.2",
+    "bpmnlint": "^6.3.0",
+    "bpmnlint-plugin-processmaker": "^1.0.2",
+    "cross-env": "^7.0.0",
+    "express": "^4.17.1",
+    "jointjs": "^3.1.1",
+    "lodash": "^4.17.15",
+    "nuxt": "^2.11.0",
+    "vuex-map-fields": "^1.3.6"
+  },
+  "devDependencies": {
+    "@babel/runtime-corejs3": "^7.8.4",
+    "@nuxtjs/eslint-config": "^2.0.2",
+    "@nuxtjs/eslint-module": "^1.1.0",
+    "@panter/vue-i18next": "^0.15.2",
+    "@processmaker/processmaker-bpmn-moddle": "0.5.0",
+    "@vue/test-utils": "^1.0.0-beta.31",
+    "axios-mock-adapter": "^1.17.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^25.1.0",
+    "bpmnlint-loader": "^0.1.4",
+    "core-js": "3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-nuxt": ">=0.5.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "i18next": "^19.1.0",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.7",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "vue-jest": "^3.0.5"
+  }
+}
